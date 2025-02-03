@@ -1,0 +1,107 @@
+/* Gallery Container */
+.App{
+  text-emphasis-color: white;
+  text-align: center;
+  text-shadow: #ffffff;
+  background-color: #000000;
+}
+/* Gallery Container */
+/* Gallery Container */
+.gallery-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #000000, #000000);
+  min-height: 100vh;
+}
+
+/* Section Borders */
+.section {
+  border: 3px solid #007bff;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter Buttons */
+.filter-buttons button {
+  margin: 5px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 25px;
+  transition: transform 0.2s, background 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons button:hover {
+  background: linear-gradient(135deg, #0056b3, #0046a1);
+  transform: scale(1.1);
+}
+
+/* Image Grid - Grouped in 4 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
